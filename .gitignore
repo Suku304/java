@@ -1,24 +1,30 @@
-# Compiled class file
-*.class
+#java
+week-1 q2
+Write a Java program and compute the sum of an integer's digits.
 
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+import java.util.Scanner;
+public class W01_P2 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+ 
+        // Prompt the user to input an integer
+        //System.out.print("Input an integer: ");
+ 
+        // Read the integer from the user
+        long n = input.nextLong();
+ 
+        // Calculate and display the sum of the digits
+        System.out.print("The sum of the digits is: " + sumDigits(n));
+    }
+// Calculate the sum of the digits by defining a sumDigits() function
+// This should return the sum
+public static int sumDigits(long n){
+  int sum = 0;
+  while( n!=0 )
+  {
+    sum += n%10;
+    n/=10;
+  }
+  return sum;
+}
+}
